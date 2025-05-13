@@ -1,0 +1,195 @@
+/* Login.css - Refined Dark Theme */
+
+/* Base Container */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+
+  padding: 2rem;
+  background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Centered Card with Proper Width */
+.login-card {
+  background: #16213e;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  padding: 2.5rem;
+  width: auto; /* Changed from 100% */
+  max-width: 420px; /* Slightly reduced from 500px */
+  min-width: 320px; /* Minimum width */
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  margin: 0 auto; /* Ensures horizontal centering */
+  animation: loginFadeIn 0.6s ease-out forwards;
+}
+
+/* Title Styling */
+.login-title {
+  color: #e6e6e6;
+  font-size: 1.8rem; /* Slightly smaller */
+  margin-bottom: 1.75rem;
+  text-align: center;
+  font-weight: 600; /* Changed from 700 */
+  animation: loginFadeIn 0.6s ease-out forwards;
+}
+
+/* Form Elements */
+.login-form-group {
+  margin-bottom: 1.25rem;
+  position: relative;
+  animation: loginFormFadeIn 0.6s ease-out forwards;
+}
+
+.login-form-group:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.login-form-group:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.login-label {
+  display: block;
+  color: #e6e6e6;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  font-size: 0.925rem; /* Slightly smaller */
+}
+
+.login-input {
+  width: 90%;
+  padding: 0.75rem 1rem; /* Slightly smaller padding */
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #e6e6e6;
+  font-size: 0.95rem; /* Slightly smaller */
+  transition: all 0.3s ease;
+}
+
+.login-input:focus {
+  outline: none;
+  border-color: #4361ee;
+  background-color: rgba(67, 97, 238, 0.05);
+  box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+}
+
+/* Button Styling */
+.login-btn {
+  width: 100%;
+  padding: 0.75rem; /* Slightly smaller */
+  border-radius: 8px;
+  border: none;
+  background-color: #4361ee;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+  animation: loginFormFadeIn 0.6s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #3a0ca3;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);
+}
+
+/* Alert Styling */
+.login-alert {
+  padding: 0.75rem 1rem; /* Slightly adjusted */
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  line-height: 1.4; /* Better text spacing */
+  animation: loginFadeIn 0.6s ease-out forwards;
+}
+
+.login-alert-danger {
+  background-color: rgba(247, 37, 133, 0.2);
+  border: 1px solid #f72585;
+  color: #ff8fab;
+}
+
+/* Link Styling */
+.login-text-center {
+  text-align: center;
+  color: #e6e6e6;
+  margin-top: 1.75rem; /* Slightly increased */
+  font-size: 0.95rem;
+  animation: loginFadeIn 0.6s ease-out forwards;
+  animation-delay: 0.4s;
+}
+
+.login-link {
+  color: #4cc9f0; /* Changed from #4361ee for better visibility */
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.login-link:hover {
+  color: #3a9fc9; /* Darker hover state */
+  text-decoration: underline;
+}
+
+/* Animations */
+@keyframes loginFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes loginFormFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .login-card {
+    padding: 2rem 1.5rem;
+    max-width: 380px;
+  }
+
+  .login-title {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    padding: 1.5rem;
+  }
+
+  .login-card {
+    padding: 1.75rem 1.25rem;
+    border-radius: 12px;
+    min-width: 280px;
+  }
+
+  .login-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .login-input, .login-btn {
+    padding: 0.7rem 1rem;
+  }
+}
