@@ -5,7 +5,7 @@ import { AuthContext } from '../context/auth';
 import moment from 'moment';
 import "./Tasks.css";
 
-const REACT_APP_API_URL = process.env.REACT_APP_API_URL || "https://task-mangement-awi2.onrender.com/api";
+const REACT_APP_API_URL = process.env.REACT_APP_API_URL || "https://task-mangement-backend-2.onrender.com/api";
 
 const Tasks = () => {
   const [tasks, setTasks] = useState([]);

@@ -2,7 +2,7 @@ import React, { createContext, useState, useEffect } from 'react';
 import axios from 'axios';
 
 const AuthContext = createContext();
-const REACT_APP_API_URL = "https://task-mangement-awi2.onrender.com/api";
+const REACT_APP_API_URL = "https://task-mangement-backend-2.onrender.com/api";
 
 const AuthProvider = ({ children }) => {
   const [authState, setAuthState] = useState({

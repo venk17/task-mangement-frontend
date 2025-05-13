@@ -5,7 +5,7 @@ import { AuthContext } from '../context/auth';
 import axios from 'axios';
 import './Profile.css';
 
-const REACT_APP_API_URL = process.env.REACT_APP_API_URL || "https://task-mangement-awi2.onrender.com/api";
+const REACT_APP_API_URL = process.env.REACT_APP_API_URL || "https://task-mangement-backend-2.onrender.com/api";
 
 const Profile = () => {
   const { authState, logout, loadUser } = useContext(AuthContext);
